@@ -1,4 +1,4 @@
-# 시간 초과 뜸 (아이디어 자체는 맞음 - 직접 교점 구해서 따져보는 방식)
+# solution 1 - 직접 교점 구해서 수선 내릴 수 있는지 따져보는 방식 -> 더 메모리 많이쓰고, 오래 걸림)
 def getLine(start, end):
     startPt = start
     endPt = end
@@ -82,25 +82,28 @@ for i in range(0, numOfAnam):
     temp2 = [float(x) for x in input().split()]
     anamRoad[i] = getLine((temp2[0], temp2[1]), (temp2[2], temp2[3]))   
 
+closeDistance = -1
+
 for i in range(0, numOfSinchon):
     for j in range(0, numOfAnam):
-        closeDistance += [min(getDistanceBetweenPoints(sinchonRoad[i][1], anamRoad[j][1])\
+        distance = min(getDistanceBetweenPoints(sinchonRoad[i][1], anamRoad[j][1])\
             , getDistanceBetweenPoints(sinchonRoad[i][1], anamRoad[j][2]) \
             , getDistanceBetweenPoints(sinchonRoad[i][2], anamRoad[j][1]) \
-            , getDistanceBetweenPoints(sinchonRoad[i][2], anamRoad[j][2]))]
+            , getDistanceBetweenPoints(sinchonRoad[i][2], anamRoad[j][2]))
 
-for i in range(0, numOfSinchon): 
-    for j in range(0, numOfAnam):
         if isOntheLine(anamRoad[j], sinchonRoad[i][1]):
-            closeDistance += [getDistanceBetweenPointAndLine(anamRoad[j], sinchonRoad[i][1])]
+            distance = min(distance, getDistanceBetweenPointAndLine(anamRoad[j], sinchonRoad[i][1]))
         if isOntheLine(anamRoad[j], sinchonRoad[i][2]):
-            closeDistance += [getDistanceBetweenPointAndLine(anamRoad[j], sinchonRoad[i][2])]
+            distance = min(distance, getDistanceBetweenPointAndLine(anamRoad[j], sinchonRoad[i][2]))
 
-for i in range(0, numOfAnam): 
-    for j in range(0, numOfSinchon):
-        if isOntheLine(sinchonRoad[j], anamRoad[i][1]):
-            closeDistance += [getDistanceBetweenPointAndLine(sinchonRoad[j], anamRoad[i][1])]
-        if isOntheLine(sinchonRoad[j], anamRoad[i][2]):
-            closeDistance += [getDistanceBetweenPointAndLine(sinchonRoad[j], anamRoad[i][2])]
+        if isOntheLine(sinchonRoad[i], anamRoad[j][1]):
+            distance = min(distance, getDistanceBetweenPointAndLine(sinchonRoad[i], anamRoad[j][1]))
+        if isOntheLine(sinchonRoad[i], anamRoad[j][2]):
+            distance = min(distance, getDistanceBetweenPointAndLine(sinchonRoad[i], anamRoad[j][2]))
 
-print(min(closeDistance))
+        if closeDistance == -1:
+            closeDistance = distance
+        else:
+            closeDistance = min(closeDistance, distance)
+
+print(closeDistance)
