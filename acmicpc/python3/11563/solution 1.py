@@ -1,4 +1,4 @@
-# solution 1 - 직접 교점 구해서 수선 내릴 수 있는지 따져보는 방식 -> 더 메모리 많이쓰고, 오래 걸림)
+# solution 1 : 직접 교점 구해서 수선 내릴 수 있는지 따져보는 방식 -> 더 메모리 많이쓰고, 오래 걸림)
 def getLine(start, end):
     startPt = start
     endPt = end
