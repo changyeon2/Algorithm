@@ -1,4 +1,4 @@
-# solution 2 : dot product로 수선 내릴 수  확인하는 방법
+# solution 2 : dot product로 수선 내릴 수 있는지 확인하는 방법
 import sys
 
 def isPossibleToMakeALine(line, point):
