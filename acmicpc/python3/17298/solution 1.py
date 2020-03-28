@@ -4,7 +4,10 @@
 # main idea : 입력받은 순서의 반대로 수들을 탐색하면서, ngeStack에 nge가 없으면 result에는 -1를, ngeStack에는 그 수를 넣고,
 #             있으면 result에 ngeStack[-1] (topOfStack)을 넣고, ngeStack에 그 수를 넣음!
 
+# 알게된 사실 : string = string + "something" 하면 새로운 배열을 계속해서 할당함! -> 타임아웃 가능성 있
+
 import sys
+from collections import deque
 
 sizeOfSeq = int(sys.stdin.readline().rstrip())
 
