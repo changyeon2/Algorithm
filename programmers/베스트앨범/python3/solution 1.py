@@ -12,7 +12,7 @@ def solution(genres, plays):
             playSum[genres[i]] += plays[i]
     
     genresList = list(musicDict.keys())
-    genresList.sort(key=lambda x : playSum[x], reverse = True)
+    genresList.sort(key=lambda x : playSum[x], reverse=True)
     
     for x in genresList:
         if len(musicDict[x]) == 1:
