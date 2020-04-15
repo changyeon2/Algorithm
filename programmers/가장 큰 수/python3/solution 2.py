@@ -12,12 +12,14 @@ def solution(numbers):
 
 def compare(str1, str2):
     if str1 + str2 > str2 + str1:
-        # 오른쪽으로 보냄!
+        # 첫번째 형태가 더 크면 음수 반환
         return -1
     elif str1 + str2 == str2 + str1:
-        # 제자리
+        # 같으면 제자리
         return 0
     else:
-        # 왼쪽으로 보냄!
+        # 첫번째 형태가 두번째 변형 꼴??(순서를 변경한 꼴)보다 작으면 양수 반환!
         return 1
+    
+    # 그냥 간단하게 str1이 str2보다 큰 상태로 유지시키고 싶으면 -1, 작은 상태로 바꾸고 싶으면 1인 듯
     
