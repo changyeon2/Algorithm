@@ -7,7 +7,6 @@ def solution(brown, red):
         if 2*width + 2*(height-2) == brown:
             return [width, height]
     
-
 def findDivisor(number):
     divisors = []
     for i in range(1, int(number**(0.5))+1):
