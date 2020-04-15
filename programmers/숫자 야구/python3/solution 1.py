@@ -7,8 +7,8 @@ def solution(baseball):
     answer = 0
 
     for x in allCases:
+        # 세 숫자 모두 다 달라야함
         if x[0] == x[1] or x[1] == x[2] or x[2] == x[0]:
-            allCases.remove(x)
             continue
         
         answerCount = 0
@@ -27,6 +27,7 @@ def solution(baseball):
             if strike == 0 and ball == 0:
                 answerCount += 1
             else:
+                # 조건 만족 X면, 바로 loop 탈출
                 break
         
         if answerCount == len(baseball):
