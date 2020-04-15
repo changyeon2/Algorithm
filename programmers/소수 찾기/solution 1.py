@@ -29,5 +29,3 @@ def isPrime(number):
                 return False
         
         return True
-
-print(solution('011'))
