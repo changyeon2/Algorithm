@@ -9,6 +9,6 @@ def solution(citations):
         if citations[i] >= length - i:
             return length - i
     
-    # 여기서 h-index 0인 
+    # 여기서 h-index 0인 경우 
     return 0
     
