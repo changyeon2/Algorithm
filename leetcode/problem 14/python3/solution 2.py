@@ -2,6 +2,7 @@
 
 class Solution:    
     def longestCommonPrefix(self, strs: List[str]) -> str:
+        # strs가 empty인 경우는 따로 처리!
         if len(strs) == 0:
             return ""
         else:
@@ -15,7 +16,7 @@ class Solution:
                 return target
             
             left = 0
-            right = len(strs[0]) - 1
+            right = len(target) - 1
             
             # list[0:0]하면 []가 됨!!
             
@@ -24,7 +25,7 @@ class Solution:
             while left <= right:
                 # mid + 1 하는 이유는, 즉, mid를 포함시키는 이유는,
                 # mid가 0인 경우에 [0:mid]를 해버리면 [0:0]이 되어서 [](empty list)가 때문!!
-                # 그냥 length로 subset한다고 생각!
+                # 그냥 length로 subset한다고 생각! (이진탐색 자체가 mid만 가지고 조건을 따져보기 때문에)
                 
                 # mid는 왼쪽 부분이 commonPrefix인 경우, 그 값이 커지기 때문에 
                 # 기존에 append하기 보단, 다시 subset하면 됨!! 
