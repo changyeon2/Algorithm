@@ -12,12 +12,10 @@ int solution(int n, vector<vector<int>> edge) {
     int* vertex_value = new int[n]; 
     vector<int>* vertices = new vector<int>[n]; 
     deque<int> queue = deque<int>();
-    bool* isVisited = new bool[n];
 
     for(int i=0; i<n; i++){
         vertices[i] = vector<int>();
         vertex_value[i] = -1;
-        isVisited[i] = false;
     }
 
     for(int i=0; i<edge.size(); i++){
