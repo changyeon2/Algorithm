@@ -3,6 +3,7 @@
 // queue는 내부적으로 deque 사용! 고로, 무엇을 include해서 queue를 구현하든 상관없음!
 #include <deque>
 
+// vector 크기보다 큰 부분 indexing 하려고 하면 segmentation fault남
 using namespace std;
 
 int solution(int n, vector<vector<int>> edge) {
