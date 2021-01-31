@@ -8,7 +8,7 @@ long long solution(int n, vector<int> times) {
     // 시간의 최소값은 심사하는 시간이 가장 짧은 한 명이 끝나기까지의 시간(최소 한 명이 한 번은 일해야하니까),
     // 시간의 최대값은 심사하는 시간이 가장 짧은 한 명"만" 일하는 worst case의 시간이다.
     // binary search를 하면서, 다같이 일하는 better case가 있는지 확인하는데, 
-    // 총 처리할 수 있는 사람 수가 n이 되는 시간 중에 가장 최소값을 return하면 된다.
+    // 총 처리할 수 있는 사람 수가 n이 되는 시간 중에 "가장 최소값"을 return하면 된다.
 
     // Find min value among elements of times
     // 이걸 long long으로 안 해주면 n * fastest_person (i.e. int * int 연산)에서
