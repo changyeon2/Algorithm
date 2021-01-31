@@ -36,9 +36,9 @@ long long solution(int n, vector<int> times) {
 
             // long long인 애들 계속 더하다보면, long long 범위도 초과할 수 있다!
             // 따라서 checked_person > n인 경우는 이 for문 안에서 체크해야한다!
-            // (checked_person == n인 경우까지 포함하는 이유는, 여기서 mid_time 값을 바꾸기 때문)
+            // (checked_person == n인 경우까지 포함하는 이유는, 여기서 min_time 값을 바꾸기 때문)
             if(checked_person >= n){
-                // 일단 이 경우도 mid_time이 될 수 있으므로, 저장!
+                // 일단 이 경우도 min_time이 될 수 있으므로, 저장!
                 // end를 하나 줄여가면서 더 짧게 걸리는 시간이 있는지 체크한다.
                 min_time = mid;
                 end = mid - 1;
