@@ -16,7 +16,7 @@ int solution(int distance, vector<int> rocks, int n) {
 	
 	while(first <= last){
 		mid = (first + last) / 2;
-		delete_count = 0;
+		deleteCount = 0;
 		int i = 0;
 		
 		while(i<rocks.size()-1){
@@ -32,7 +32,7 @@ int solution(int distance, vector<int> rocks, int n) {
 					// 그 위치로 jump한다(i += j+1)
 					if(dist >= mid){
 						isValid = true;
-						delete_count += j;
+						deleteCount += j;
 						i += j+1;
 						break;
 					}
@@ -40,10 +40,10 @@ int solution(int distance, vector<int> rocks, int n) {
 				
 				// 가능한 경우를 탐색했는데도 전부 mid보다 작은 경우
 				if(!isValid){
-					// 첫번째 dist인데도 만족하지 않는다면, 모든 바위를 다 지워도 안 된다는 것이므로, n보다 큰 숫자를 delete_count에 넣는다. 
-					if(i == 0) delete_count = n+1;
+					// 첫번째 dist인데도 만족하지 않는다면, 모든 바위를 다 지워도 안 된다는 것이므로, n보다 큰 숫자를 deleteCount에 넣는다. 
+					if(i == 0) deleteCount = n+1;
 					// 중간 dist가 만족하지 않는다면, 그냥 직전의 바위 하나 제거해서, 앞과 같은 valid한 그룹으로 만들면 된다.
-					else delete_count += 1;
+					else deleteCount += 1;
 					
 					break;
 				}
@@ -52,18 +52,18 @@ int solution(int distance, vector<int> rocks, int n) {
 			else i += 1;
 		}
 		
-		if(delete_count < n){
+		if(deleteCount < n){
 			first = mid + 1;
-			// 정확히 delete_count == n이 되는 경우가 있으면 그게 답! (delete_count가 클수록, 가장 작은 값이 커지기 때문.)
+			// 정확히 deleteCount == n이 되는 경우가 있으면 그게 답! (deleteCount가 클수록, 가장 작은 값이 커지기 때문.)
 	
-			// 그러나 없으면, delete_count < n이 되는 경우의 mid값이, answer의 후보군이 되므로, 저장해둔다!
+			// 그러나 없으면, deleteCount < n이 되는 경우의 mid값이, answer의 후보군이 되므로, 저장해둔다!
 			// 그 이유는 아무거나 n 값에 맞게 지워버리면 해당 mid 값이 최소값이 되기 때문.
 			if(!isExactCaseAvailable) answer = mid;
 		}
-		else if(delete_count == n){
+		else if(deleteCount == n){
 			first = mid + 1;
 			
-			// 정확히 delete_count == n이 되는 경우이므로 answer 값을 바꾸고, 이것을 나타내는 boolean var도 값을 바꾼다!
+			// 정확히 deleteCount == n이 되는 경우이므로 answer 값을 바꾸고, 이것을 나타내는 boolean var도 값을 바꾼다!
 			isExactCaseAvailable = true;
 			answer = mid;
 		}
