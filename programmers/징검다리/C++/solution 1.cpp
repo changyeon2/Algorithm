@@ -54,7 +54,7 @@ int solution(int distance, vector<int> rocks, int n) {
 		
 		if(delete_count < n){
 			first = mid + 1;
-			// 정확히 delete_count == n이 되는 경우가 있으면 그게 답!
+			// 정확히 delete_count == n이 되는 경우가 있으면 그게 답! (delete_count가 클수록, 가장 작은 값이 커지기 때문.)
 	
 			// 그러나 없으면, delete_count < n이 되는 경우의 mid값이, answer의 후보군이 되므로, 저장해둔다!
 			// 그 이유는 아무거나 n 값에 맞게 지워버리면 해당 mid 값이 최소값이 되기 때문.
