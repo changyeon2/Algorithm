@@ -5,7 +5,7 @@
 using namespace std;
 
 int solution(int distance, vector<int> rocks, int n) {
-    int first = 0, last = distance, mid, delete_count, answer;
+    int first = 0, last = distance, mid, deleteCount, answer;
 	
 	rocks.push_back(first);
 	rocks.push_back(last);
