@@ -29,7 +29,7 @@ array<int, 2> getNearestNonALetter(string name, int currentIndex, map<int, bool>
 }
 
 int solution(string name){
-    int answer = 0, changeCount = 0, currentIndex = 0, toBeChangedCount = 0;
+	int answer = 0, changeCount = 0, currentIndex = 0, toBeChangedCount = 0;
 	
 	map<int, bool> isChanged;
 	
