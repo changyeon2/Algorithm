@@ -47,7 +47,7 @@ int solution(string name){
 		// this condition is for starting point (currentIndex == 0)
 		// if starting point is equal to 'A', we don't need to include this case when calculating 'changeCount'
 		if(name[currentIndex] != 'A') changeCount += 1;
-		-
+		
 		array<int, 2> nearestPointInfo = getNearestNonALetter(name, currentIndex, isChanged);
 		
 		currentIndex = nearestPointInfo[0];
