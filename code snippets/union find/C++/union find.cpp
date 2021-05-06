@@ -20,4 +20,4 @@ int unionFunction(int node1, int node2, int parent[]){
 		
 		return node2;
 	}
-}	
+}
