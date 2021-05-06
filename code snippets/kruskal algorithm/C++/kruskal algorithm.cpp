@@ -17,7 +17,7 @@ int cost = 0;
 for(int i=0; i<graph.size(); i++){
 	if(curLineNum == vertexNum-1) break;
 		
-  root1 = findFunction(graph[i][0], parent);
+	root1 = findFunction(graph[i][0], parent);
 	root2 = findFunction(graph[i][1], parent);
 	
   // 여기서 root1과 root2을 비교해야한다.
