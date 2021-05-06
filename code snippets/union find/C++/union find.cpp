@@ -5,7 +5,7 @@ int findFunction(int node, int parent[]){
 	return parent[node] = findFunction(parent[node], parent); 
 }
 
-// union function
+// Union function
 int unionFunction(int node1, int node2, int parent[]){
 	node1 = findFunction(node1, parent); 
 	node2 = findFunction(node2, parent); 
