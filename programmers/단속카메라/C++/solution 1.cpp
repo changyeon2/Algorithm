@@ -38,7 +38,7 @@ int solution(vector<vector<int>> routes) {
         
 		else if(popedVector[0] <= topOfStack[0] && topOfStack[1] <= popedVector[1]) continue;
 		
-        else answer++;
+        	else answer++;
 	}
 	
     return answer;
