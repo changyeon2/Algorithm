@@ -1,4 +1,5 @@
-### Kruskal algorithm (C++ ver.)
+#### Kruskal algorithm (C++ ver.)
+
 ```C++
 // for given graph({{vertex1, vertex2, weight}}) and vertexNum(total number of vertex),
 
