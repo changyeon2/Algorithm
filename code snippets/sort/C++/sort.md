@@ -1,4 +1,4 @@
-### Sort vectors in ascending order of second element
+#### Sort vectors in ascending order of second element
 
 ```C++
 # include <algorithm>
