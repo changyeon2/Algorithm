@@ -1,4 +1,4 @@
-### Union find
+#### Union find
 ```C++
 // Find function
 int findFunction(int node, int parent[]){
