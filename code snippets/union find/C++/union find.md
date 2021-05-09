@@ -1,3 +1,5 @@
+### Union find
+```C++
 // Find function
 int findFunction(int node, int parent[]){
 	if(parent[node] == node) return node; 
@@ -21,3 +23,4 @@ int unionFunction(int node1, int node2, int parent[]){
 		return node2;
 	}
 }
+```
