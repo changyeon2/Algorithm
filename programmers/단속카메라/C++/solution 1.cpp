@@ -6,7 +6,7 @@
 using namespace std;
 
 int solution(vector<vector<int>> routes) {
-    int answer = 0;
+	int answer = 0;
 	
 	sort(routes.begin(), routes.end(), [](auto vec1, auto vec2){
 		return (vec1[0] > vec2[0]);
