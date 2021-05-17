@@ -28,4 +28,6 @@ int solution(vector<int> scoville, int K) {
 		
 		answer++;
 	}
+    
+	return answer;
 }
