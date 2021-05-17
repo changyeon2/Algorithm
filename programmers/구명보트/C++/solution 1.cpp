@@ -9,7 +9,7 @@
 using namespace std;
 
 int solution(vector<int> people, int limit) {
-    int answer = 0;
+	int answer = 0;
 	
 	int head = 0, tail = people.size()-1;	
 	
