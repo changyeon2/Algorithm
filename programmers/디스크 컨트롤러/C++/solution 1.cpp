@@ -15,7 +15,7 @@ auto compareBySecond = [](const vector<int>& vec1, const vector<int>& vec2){
 };
 
 int solution(vector<vector<int>> jobs) {
-    int answer = 0, currentTime = 0;
+	int answer = 0, currentTime = 0;
 
 	priority_queue<vector<int>, vector<vector<int>>, decltype(compareByfirst)> minHeapByFirst(compareByfirst);
 	
