@@ -41,5 +41,5 @@ int solution(vector<vector<int>> routes) {
         	else answer++;
 	}
 	
-    return answer;
+	return answer;
 }
