@@ -1,4 +1,4 @@
-##### Custom compare function
+### Custom compare function
 ```c++
 #include <queue>
 
