@@ -1,4 +1,4 @@
-### Custom compare function
+#### Custom compare function
 ```c++
 #include <queue>
 
@@ -8,7 +8,7 @@ auto compareFunction= [](const vector<int>& vec1, const vector<int>& vec2){
 
 int main(){
 	priority_queue<vector<int>, vector<vector<int>>, decltype(compareFunction)> minHeapBySecondElement(compareFunction);
-  
+  priority queue
 	return 0;
 }
 ```
