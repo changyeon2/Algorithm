@@ -33,7 +33,7 @@ int solution(int bridge_length, int weight, vector<int> truck_weights) {
         
         answer++;
         
-        // 여기까지 왔다는 건, 한번 진행했다는 뜻(=1초가 지났다)
+        // 여기까지 왔다는 건, 한번 진행했다는 뜻(= 1초가 지났다)
         if(bridge.empty()) return answer;
     }
       
