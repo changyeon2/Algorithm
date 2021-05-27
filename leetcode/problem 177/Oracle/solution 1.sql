@@ -1,4 +1,4 @@
---using Dynamic SQL & DENSE_RANK()
+-- Using Dynamic SQL & DENSE_RANK()
 
 CREATE FUNCTION getNthHighestSalary(N IN NUMBER) RETURN NUMBER IS
 result NUMBER;
