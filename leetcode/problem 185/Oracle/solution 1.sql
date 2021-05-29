@@ -1,7 +1,7 @@
 SELECT
-    Department.Name as "Department",
-    RankedEmployee.Name as "Employee",
-    RankedEmployee.Salary as "Salary"    
+    Department.Name AS "Department",
+    RankedEmployee.Name AS "Employee",
+    RankedEmployee.Salary AS "Salary"    
 FROM(
     SELECT
         Employee.*,
