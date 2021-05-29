@@ -1,3 +1,4 @@
+-- Using PARTITION BY
 SELECT
     Department.Name AS "Department",
     RankedEmployee.Name AS "Employee",
