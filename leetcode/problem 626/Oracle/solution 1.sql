@@ -13,4 +13,5 @@ SELECT
     END AS "student"
 FROM
     seat
-ORDER BY "id";
+ORDER BY
+    "id";
