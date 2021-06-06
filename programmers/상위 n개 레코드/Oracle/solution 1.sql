@@ -9,4 +9,5 @@ FROM
     ORDER BY
         DATETIME
     )
-WHERE ROWNUM = 1;
+WHERE
+    ROWNUM = 1;
