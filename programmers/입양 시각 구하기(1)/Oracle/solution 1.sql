@@ -1,3 +1,4 @@
+-- 보완하기!
 SELECT
     TO_NUMBER(TO_CHAR(DATETIME,'HH24')) AS "HOUR",
     COUNT(*) AS "COUNT"
