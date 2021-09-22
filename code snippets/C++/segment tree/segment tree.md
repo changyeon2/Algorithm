@@ -1,3 +1,4 @@
+##### Segment Tree (C++ Ver.)
 ```C++
 // indices start from 0, thus index of child node is 2*idx + 1, 2*idx + 2 respectively. (instead of 2*idx, 2*idx + 1)
 
